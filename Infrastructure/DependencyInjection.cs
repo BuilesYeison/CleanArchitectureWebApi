@@ -4,6 +4,8 @@ using Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Application.Interfaces.Services;
+using Infrastructure.Services;
 
 namespace Infrastructure
 {
@@ -17,6 +19,9 @@ namespace Infrastructure
 
             // Inject repositories
             services.AddScoped<IFooRepository, FooRepository>();
+
+            //Inject services
+            services.AddTransient<IMessageService, AppMessageService>();
 
             return services;
         }
