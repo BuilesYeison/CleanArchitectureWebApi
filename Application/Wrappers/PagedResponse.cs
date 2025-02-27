@@ -15,7 +15,7 @@ namespace Application.Wrappers
         public bool HasNextPage => PageNumber < TotalPages;
         public bool HasPreviousPage => PageNumber > 1;
 
-        public PagedResponse(T data, int pageNumber, int pageSize, int totalRecords) : base(data)
+        public PagedResponse(T data, int pageNumber, int pageSize, int totalRecords,string message = "",bool success = true) : base(data,message,success)
         {
             PageNumber = pageNumber;
             PageSize = pageSize;

@@ -20,7 +20,7 @@ namespace Application.Features.Foo.Handlers
 
         public async Task<PagedResponse<IEnumerable<FooDTO>>> Handle(GetAllFooQuery request, CancellationToken cancellationToken)
         {
-            var (totalRecords,fooItems) = await _fooRepository.GetAllAsync(request.PageNumber,request.PageSize);
+            var (fooItems,totalRecords) = await _fooRepository.GetAllAsync(request.PageNumber,request.PageSize);
 
             var mappedItems = _mapper.Map<IEnumerable<FooDTO>>(fooItems);
 

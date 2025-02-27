@@ -10,6 +10,6 @@ namespace Application.Interfaces.Repositories
     public interface IFooRepository
     {
         //returns total records and items
-        Task<(int, IEnumerable<Foo>)> GetAllAsync(int pageNumber, int pageSize);
+        Task<(IEnumerable<Foo>,int)> GetAllAsync(int pageNumber, int pageSize);
     }
 }
