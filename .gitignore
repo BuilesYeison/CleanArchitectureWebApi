@@ -1,0 +1,62 @@
+# Visual Studio y Rider
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+.vs/
+
+# Archivos de compilación
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+*.log
+
+# Configuración de usuario
+*.user
+*.userosscache
+*.sln.cache
+
+# Paquetes y dependencias
+packages/
+node_modules/
+*.nupkg
+*.snupkg
+project.lock.json
+
+# Configuración de Entity Framework Core
+**/Migrations/
+**/appsettings*.json
+
+# Archivos de Docker
+docker-compose.override.yml
+.dockerignore
+
+# Certificados y claves
+*.pfx
+*.p12
+secrets.json
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y archivos temporales
+*.log
+logs/
+temp/
+
+# Archivos de cobertura de código
+coverage/
+*.coverage
+*.coveragexml
+lcov.info
+
+# Configuración de herramientas
+!/.github/
+!.editorconfig
+!.gitattributes
