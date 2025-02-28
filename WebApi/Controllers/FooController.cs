@@ -1,6 +1,7 @@
 using Application.Features.Foo.DTO;
 using Application.Features.Foo.Queries;
 using Application.Wrappers;
+using Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,7 +28,7 @@ namespace WebApi.Controllers
                 var result = await _mediator.Send(new GetAllFooQuery { PageNumber = pageNumber, PageSize = pageSize });
                 return Ok(result);
             }
-            catch (Exception ex) { 
+            catch (FooBarException ex) { //handle especific exception, for common/unhandled/global exceptions, middleware is going to handle it
                 return BadRequest(ex.Message);
             }
         }
